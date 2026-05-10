@@ -10,7 +10,7 @@ The **Flight Management System (SkyBook)** is a Java-based desktop application d
 
 | Full Name | CMS / ID | Section |
 |-----------|----------|---------|
-| Keertan-Shiv|(023-25-0105) | *(BSCS-E)* |
+| Keertan-Shiv | (023-25-0105) | *(BSCS-E)* |
 
 ---
 
@@ -85,7 +85,7 @@ Open `FlightGUI.java` inside the `DBConnection` class and update the password:
 
 ```java
 Connection c = DriverManager.getConnection(
-    "jdbc:mysql://localhost:3306/flightdb", "root", "YourPasswordHere");
+    "jdbc:mysql://localhost:3306/flightdb", "root", "shivkirtan");
 ```
 
 ---
@@ -104,7 +104,7 @@ Make sure you have the following installed:
 ### Step 1 — Clone or Download the Project
 
 ```bash
-git clone https://github.com/YourUsername/FlightManagementSystem.git
+git clone https://github.com/shivkirtan09-goat/FlightManagementSystem.git
 ```
 
 Or download the ZIP and extract it.
@@ -126,7 +126,21 @@ Or download the ZIP and extract it.
 
 Run the SQL commands from the **Database Setup** section above.
 
-### Step 5 — Run the Project
+### Step 5 — Compile & Run (Command Line)
+
+If running from terminal instead of IntelliJ, use these commands:
+
+```bash
+# Compile
+javac -cp .;mysql-connector-j-9.7.0.jar FlightGUI.java
+
+# Run
+java -cp .;mysql-connector-j-9.7.0.jar FlightGUI
+```
+
+> **Note:** On Linux/macOS, replace `;` with `:` in the classpath separator.
+
+### Step 6 — Run via IntelliJ
 
 1. Open `FlightGUI.java`
 2. Click the **Run** button (▶️) or press `Shift + F10`
@@ -153,17 +167,14 @@ Run the SQL commands from the **Database Setup** section above.
 
 ## 🎬 Demo Video
 
-> 📺 **YouTube Demo Link:https://youtu.be/ddwMc6v6zMQ
->
-
+> 📺 **YouTube Demo:** [https://youtu.be/ddwMc6v6zMQ](https://youtu.be/ddwMc6v6zMQ)
 
 ---
 
 ## 🔗 GitHub Repository
 
-> 📁 **Repository Link:** *(Add your public GitHub repository link here)*
->
-> Example: `https://github.com/YourUsername/FlightManagementSystem`
+> 📁 **Repository:** [https://github.com/shivkirtan09-goat/FlightManagementSystem.git]
+(https://github.com/shivkirtan09-goat/FlightManagementSystem.git)
 
 ---
 
@@ -205,6 +216,7 @@ FlightManagementSystem/
 - Admin credentials are hardcoded as `admin / 1234` for demo purposes.
 - Seat count updates automatically in the database after every booking.
 - Search works on both origin and destination city (partial match supported).
+- On **Linux/macOS**, replace `;` with `:` in the compile/run commands.
 
 ---
 
